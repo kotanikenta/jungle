@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jungle Experience</title>
+    <link rel="stylesheet" type="text/css" href="jungle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <!-- 他の必要なスクリプトやライブラリを追加 -->
+</head>
+<body>
+    <header>
+        <div class="logo">Jungle Experience</div>
+        <nav>
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="jungle.html">ホーム</a></li>
+                <li><a id="newslink" href="news.html">お知らせ</a></li>
+                <li><a href="company.html">企業情報</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Welcome to the Jungle Co. Ltd</h1>
+    <button id="soundButton">Play Jungle Sounds</button>
+
+    <div id="dateContainer"></div>
+    <button id="showDateButton">Show Date</button>
+
+    <div id="contactFormContainer">
+        <h2 class="contactTitle">Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="jungle.js"></script>
+    <script src="news.js"></script>
+   
+</body>
+</html>

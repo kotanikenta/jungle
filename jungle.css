@@ -1,0 +1,158 @@
+body {
+    background-image: url('erawan-g408adae28_1280.jpg');
+    background-size: cover;
+    text-align: center;
+    padding-top: 100px;
+    color:white;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* オーバーレイ */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* 背景を暗くするために透明度を上げる */
+    z-index: -1;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#dateContainer {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contactTitle {
+    font-size: 24px;
+}
+
+header {
+    background-color: #333;
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: white; /* メニューアイテムの文字色を白色に設定 */
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #4283bc; /* メニューアイテムのホバー時の文字色を変更（例：黄色） */
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-toggle:checked ~ .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #333;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        z-index: 1;
+    }
+
+    .menu-toggle:checked ~ .menu li {
+        margin: 8px 0;
+    }
+
+    .menu-toggle:checked + .menu-icon {
+        transform: rotate(90deg);
+    }
+
+    body {
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    #dateContainer {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+a[href="jungle.html"] {
+    color: white;
+}
